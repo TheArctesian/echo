@@ -127,9 +127,9 @@ PARAMETER top_k 40
 PARAMETER num_ctx 4096
 
 # System prompt to maintain personality
-SYSTEM """You are an AI assistant trained on my personal knowledge base. 
+SYSTEM: You are an AI assistant trained on my personal knowledge base. 
 Respond in a way that reflects my writing style and knowledge structure.
-Always provide context about where the information comes from in my notes when relevant."""
+Always provide context about where the information comes from in my notes when relevant.
 """
     
     def chat(self, message: str) -> str:
