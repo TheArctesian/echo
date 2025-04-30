@@ -1,0 +1,17 @@
+database:
+  host: localhost
+  port: 5432
+  name: data_analytics_test
+  pool_size: 5
+
+logging:
+  level: DEBUG
+  file: logs/test.log
+
+services:
+  google:
+    rate_limit: 100
+  crypto:
+    rate_limit: 50
+  health:
+    check_interval: 60

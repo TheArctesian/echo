@@ -1,7 +1,17 @@
-# docker/docker-compose.yml
 version: '3.8'
 
 services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=timescaledb
+    depends_on:
+      - timescaledb
+    volumes:
+      - ./logs:/app/logs
+
   timescaledb:
     image: timescale/timescaledb:latest-pg14
     ports:
@@ -17,6 +27,15 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
 
 volumes:
   timescaledb_data:
