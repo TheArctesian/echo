@@ -1,6 +1,6 @@
-# eem
+# echo
 
-Meant to me like LLM but EEM as a reverse of me. This is pretty much I am getting way to busy, and I want an assistant or a clone of me. I figured that if I use an Ollama model I could make a digital assistant for myself or at least have fun talking to myself and gain some insight off of that.
+This is the llm version of me so an echo of myself, far from perfect but maybe resonante. This is pretty much I am getting way to busy, and I want an assistant or a clone of me. I figured that if I use an Ollama model I could make a digital assistant for myself or at least have fun talking to myself and gain some insight off of that.
 
 I had a heavy internal debate as to whether or not to use go or rust for this but flipped a coin and decided to stay with python. As this took me an hour to build rather than 2 hrs with go or 3 with rust.
 
